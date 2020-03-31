@@ -1,0 +1,15 @@
+body {
+  padding: 30px;
+  margin-top: 15vh;
+  background-color: gray;
+}
+
+region.wavesurfer-region:before {
+  padding: 10px;
+  content: attr(data-region-label);
+}
+
+.phonemeSelector {
+  margin: 3px;
+  font-size: 1.125em;
+}

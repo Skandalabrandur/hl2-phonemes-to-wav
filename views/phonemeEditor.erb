@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- My stinkies -->
+<script src="/js/globals.js"></script>
+<script src="/js/phoneme_functions.js"></script>
+<script src="/js/various_functions.js"></script>
+
+<!-- Other Libraries -->
+<script src="/js/wavesurfer.js"></script>
+<script src="/js/regions.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+
+<!-- My final head stinky -->
+<link href="/css/style.css" rel="stylesheet" />
+ 
+</head>
+  <body>
+    <div class="modal" id="phonemeModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="phonemeModalWord">Modal title</h5>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+            <div class="row">
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="bEET">iy</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="i in bit">ih</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="bEt">eh</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="bAIt">ey</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="bAt">ae</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="bOtt">aa</div>
+            </div>
+            <div class="row">
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="bOUt">aw</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="i in bite">ay</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="bUt">ah</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="bOUght">ao</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="bOY">oy</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="bOAt">ow</div>
+            </div>
+
+            <div class="row">
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="bOOk">uh</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="bOOt">uw</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="bIRd">er</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="About">ax</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="Sea">s</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="SHe">sh</div>
+            </div>
+
+            <div class="row">
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="Zone">z</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="aZure">zh</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="Fin">f</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="THin">th</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="Van">v</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="THen">dh</div>
+            </div>
+
+            <div class="row">
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="MoM">m</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="NooN">n</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="siNG">ng</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="Lay">l</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="Ray">r</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="Way">w</div>
+            </div>
+
+            <div class="row">
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="Yacht">y</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="Hay">hh</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="Bee">b</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="Day">d</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="Joke">jh</div>
+              <div class="btn-info phonemeSelector col" data-toggle="tooltip" title="Gay">g</div>
+            </div>
+
+            <div class="row">
+              <div class="btn-info phonemeSelector col"data-toggle="tooltip" title="Pea">p</div>
+              <div class="btn-info phonemeSelector col"data-toggle="tooltip" title="Tea">t</div>
+              <div class="btn-info phonemeSelector col"data-toggle="tooltip" title="Key">k</div>
+              <div class="btn-info phonemeSelector col"data-toggle="tooltip" title="CHoke">ch</div>
+              <div class="btn-info phonemeSelector col"data-toggle="tooltip" title="Ah">aa2</div>
+              <div class="btn-info phonemeSelector col"data-toggle="tooltip" title="Rolled R">r2</div>
+            </div>
+            </div>
+            <hr>
+            <div id="phonemeModalList"></div>
+            <button type="button" id="undoPhonemeBtn" class="btn btn-danger">Undo</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="saveWordBtn" class="btn btn-primary" data-dismiss="modal">Save word</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="waveform"></div>
+    <form id="daform" action="/" method="post" enctype="multipart/form-data">
+      <label for="audiofileinput">Choose a file to edit:</label>
+      <input type="file" name="file" onchange="openFile(event)"
+           id="audiofileinput"
+           accept="audio/wav">
+           
+      <input id="phonemeinput" type="hidden" name="phonemedata"/>
+    </form>
+
+    <button id="addWordBtn" class="btn btn-success">Add Word</button>
+    <button id="collapseBtn" class="btn btn-success">Collapse words</button>
+    <button id="overlapBtn" class="btn btn-success">Normalize</button>
+    <br/>
+    <!-- <button id="createBtn" class="btn btn-primary">Create Phoneme Wav</button> -->
+    <buttod id="createBtn" class="btn btn-primary">Export Phoneme Block</button>
+  </body>
+
+  <script src="/js/initialization.js"></script>
+</html>
