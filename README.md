@@ -25,7 +25,7 @@ Simply visit that in your browser and get to work :D
 * Export wav file
 
 # Video demonstration
-coming soon.
+[Click here for a video demonstration](https://youtu.be/cMldCyaIt5w)
 
 # Known issues
 * No edge case testing done. Only perfect workflow assumed
