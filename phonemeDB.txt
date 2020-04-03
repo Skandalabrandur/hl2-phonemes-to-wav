@@ -1,0 +1,1 @@
+WORDTHATISNEVERMATCHED this file can't be empty. Feel free to delete this line when you've added your own phoneme words into the dictionary
