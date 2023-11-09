@@ -24,9 +24,6 @@ Simply visit that in your browser and get to work :D
 * Normalize
 * Export wav file
 
-# Video demonstration
-[Click here for a video demonstration](https://youtu.be/cMldCyaIt5w)
-
 # Known issues
 * No edge case testing done. Only perfect workflow assumed
 * Cannot edit files that already have a VDAT header
